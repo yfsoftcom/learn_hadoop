@@ -1,3 +1,6 @@
 .gradle/
 build
 gradle/
+*.class
+.classpath
+.project
