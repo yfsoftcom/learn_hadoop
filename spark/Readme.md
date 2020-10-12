@@ -15,9 +15,10 @@ https://github.com/tirthajyoti/Spark-with-Python/blob/master/Dataframe_SQL_query
 - [x] Spark Connected MongoDB
 - [x] Run Sql to read data from it
 - [ ] Run advanced sql to read parent-children documents
+  - More staff to read https://sparkbyexamples.com/spark/spark-flatten-nested-struct-column/
 - [ ] Save the data into mongo or csv
-- [ ] Connect postgresql at the same time
-- [ ] Join the 2 dataset.
+- [x] Connect postgresql at the same time
+- [x] Join the 2 dataset.
 
 ### Spark And Mongo
 
@@ -28,11 +29,12 @@ https://stackoverflow.com/questions/52385123/pyspark-mongodb-java-lang-noclassde
 
 3. 需要下载到对应的jar文件，然后copy到Spark_Home的jars目录下，执行下面的命令可以打开对应的交互终端。
 
+
 ```bash
-pyspark --jars mongo-spark-connector_2.12-3.0.0.jar \
- --driver-class-path mongo-spark-connector_2.12-3.0.0.jar \
+pyspark --jars /opt/bitnami/spark/ivy/jars/mongo-spark-connector_2.12-3.0.0.jar \
+ --driver-class-path /opt/bitnami/spark/ivy/jars/mongo-spark-connector_2.12-3.0.0.jar \
  --conf spark.mongodb.input.uri=mongodb://172.16.11.63/ev_metro.customer?readPreference=primaryPreferred \
- --conf spark.mongodb.output.uri=mongodb://172.16.11.63/ev_metro.customer
+ --conf spark.mongodb.output.uri=mongodb://172.16.11.63/ev_metro.result
 ```
 
 4. 使用下面的命令提交脚本
