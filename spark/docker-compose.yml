@@ -15,7 +15,7 @@ services:
       - ./files:/data/
       - ./jars_dir:/opt/bitnami/spark/ivy:z
     ports:
-      - '8080:8080'
+      - '18080:8080'
   spark-worker-1:
     image: docker.io/bitnami/spark:3.0.1
     container_name: spark-worker-1
